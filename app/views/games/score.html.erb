@@ -1,0 +1,13 @@
+<div>
+<h1>Results</h1>
+
+<% if @included == false %>
+Sorry but <strong><%= @answer %></strong> cant be built out of <%= @letters %>
+<% elsif @valid == false %>
+Sorry but <strong><%= @answer %></strong> does not seem to be a valid english word
+<% else %>
+<strong>Congratulations!</strong> <%= @answer %> is a valid english word
+<% end %>
+
+<%= link_to "Play again", new_path %>
+</div>
